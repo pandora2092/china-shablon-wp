@@ -1,0 +1,478 @@
+/*!
+Theme Name: china
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: china
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+china is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+.pagination ul a,
+.pagination .page-numbers {
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: #96928c;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0;
+}
+.pagination .current {
+	color: #1c1c1c;
+}
+ul .prev {
+  background-image: url(img/icons/ic-arrow-left-white.svg);
+  background-repeat: no-repeat;
+  background-position: center -webkit-calc(50% + 1px);
+  background-position: center calc(50% + 1px);
+  -webkit-background-size: 14px 14px;
+  background-size: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #df2b23;
+  margin-right: 11.2rem;
+}
+ul .next {
+	background-image: url(img/icons/ic-arrow-left-white.svg);
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 1px);
+  background-size: 14px;
+  box-shadow: none;
+  background-color: #df2b23;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-left: 11.2rem;
+}
+
+.nf-fu-progress {
+  display: none;
+}
+
+/*input[type="checkbox"] {
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+*/
+.beige-fill .label-left .nf-field-label {
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.beige-fill .label-left .nf-field-label label {
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.beige-fill .nf-field-element input, 
+.beige-fill .nf-field-element select, 
+.beige-fill .nf-field-element textarea,
+.signup-form .nf-field-element input, 
+.signup-form .nf-field-element select, 
+.signup-form .nf-field-element textarea {
+  height: 4.8rem;
+}
+
+#nf-popup-287 .nf-field-element .form-control,
+#nf-popup-315 .nf-field-element .form-control {
+  background-color: #e9edf1;
+  height: 4.8rem;
+}
+
+.signup-form  .nf-field-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px!important;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.signup-form  .nf-field-label label {
+  font-weight: 400;
+}
+
+.signup-form .nf-form-fields-required {
+  line-height: 1.2;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.signup-form .label-above {
+  margin-bottom: 1.5rem;
+}
+
+.signup-form .nf-field-element .btn-accent-dark {
+  height: 5.4rem;
+}
+
+.beige-fill .check_box_wrap {
+  display: block;
+}
+
+.beige-fill .ninja-forms-field1 {
+  font-size: 12px;
+  line-height: 18px;
+  display: block;
+  width: 100%;
+  height: 4.8rem;
+  background: #fff;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 0 2.2rem;
+  border: none;
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,.15);
+  box-shadow: 0 0 0 rgba(0,0,0,.15);
+  -webkit-transition: border-color .25s ease,-webkit-box-shadow .25s ease;
+  transition: border-color .25s ease,-webkit-box-shadow .25s ease;
+  -o-transition: border-color .25s ease,box-shadow .25s ease;
+  transition: border-color .25s ease,box-shadow .25s ease;
+  transition: border-color .25s ease,box-shadow .25s ease,-webkit-box-shadow .25s ease;
+}
+
+.beige-fill #nf-field-6 {
+  color: #fff;
+  background-color: #df2b23;
+  -webkit-box-shadow: 0 10px 20px rgba(223,43,35,.4);
+  box-shadow: 0 10px 20px rgba(223,43,35,.4);
+  height: 6.4rem;
+  line-height: 6.4rem;
+  padding: 0 6.6rem;
+  display: inline-block;
+  width: auto;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background-color .25s ease,color .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: background-color .25s ease,color .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+  -o-transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease;
+  transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease;
+  transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+}
+
+.beige-fill .nf-fu-fileinput-button {
+  width: 17.5rem;
+  padding: 0 1rem;
+  line-height: 5.2rem;
+  border: 2px solid #d1d1d1;
+  background-color: transparent;
+  color: #1c1c1c;
+  display: inline-block;
+  height: 5.4rem;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background-color .25s ease,color .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+  transition: background-color .25s ease,color .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+  -o-transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease;
+  transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease;
+  transition: background-color .25s ease,color .25s ease,box-shadow .25s ease,transform .25s ease,border-color .25s ease,-webkit-box-shadow .25s ease,-webkit-transform .25s ease;
+}
+
+.beige-fill input[type=checkbox]:checked::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1
+}
+
+
+.beige-fill input[type=checkbox] {
+  display: block;
+  cursor: pointer;
+  padding-left: 0;
+  position: relative;
+  border: none;
+}
+.beige-fill .nf-error .ninja-forms-field {
+  border: none;
+}
+.beige-fill input[type=checkbox]:after, 
+.beige-fill input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.beige-fill input[type=checkbox]:before {
+  background: #fff;
+  border: 1px solid #dadada;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.beige-fill input[type=checkbox]:after {
+  background-image: url(img/icons/ic-checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: 8px 8px;
+  background-size: 8px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity .25s ease,-webkit-transform .25s ease;
+  transition: opacity .25s ease,-webkit-transform .25s ease;
+  -o-transition: transform .25s ease,opacity .25s ease;
+  transition: transform .25s ease,opacity .25s ease;
+  transition: transform .25s ease,opacity .25s ease,-webkit-transform .25s ease;
+}
+
+.beige-fill .sent_doc {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.beige-fill .sent_doc .nf-before-field {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 2%;
+  text-align: right;
+  width: 35%;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.beige-fill .sent_doc .nf-field {
+  display: inline-block;
+  width: 65%;
+  -ms-flex-order: 10;
+  order: 10;
+}
+
+.beige-fill .label-right .nf-field-description {
+  margin-right: 0;
+}
+
+.beige-fill #ninja_forms_required_items, 
+.beige-fill .nf-field-container {
+  margin-bottom: 1rem;
+}
+
+.beige-fill select option:hover {
+  background-color: #df2b23!important;
+  color: #fff;
+}
+
+.beige-fill .checkbox-wrap .nf-field-label {
+  height: 22px;
+  padding: 0 8px;
+}
+
+.beige-fill .label_wrap {
+  margin-left: 235px;
+  margin-top: 3rem;
+}
+
+.footer-nav .default-list .current_page_item a {
+  color: #df2b23
+}
+.cert-cards img {
+  height: 100%;
+}
+
+.signup-form .nf-form-title h3 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+}
+
+.hei-page .signup-form .nf-form-title h3 {
+  display: none;
+}
+
+.hei-page .signup-form .nf-form-fields-required {
+  display: none;
+}
+
+.form_bottom .nf-form-title h3 {
+  display: none;
+}
+
+#br-crumb a,
+.sep {
+  color: #96928c;
+}
+
+.sep {
+  margin: 0 1.6rem;
+}
+
+#br-crumb .page-name{
+  color: #403e3c;
+}
+
+#nf-popup-287 h3,
+#nf-popup-315 h3 {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-weight: normal;
+  margin-bottom: 3.5rem;
+  display: block;
+  width: 100%;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+.form_bottom .nf-form-fields-required {
+  display: none;
+}
+#nf-popup-287 .nf-form-fields-required,
+#nf-popup-315 .nf-form-fields-required {
+  display: none;
+}
+
+#nf-popup-287 .nf-field-label label,
+#nf-popup-315 .nf-field-label label {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color:#000;
+}
+
+#nf-popup-287 .nf-field-label,
+#nf-popup-315 .nf-field-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0px;
+  color:#000;
+}
+
+#nf-popup-287 #nf-field-24-container,
+#nf-popup-315 #nf-field-24-container {
+  margin-bottom: 0;
+}
+
+#nf-popup-287 .nf-field-container,
+#nf-popup-287 .nf-field-container {
+  margin-bottom: 1.5rem;
+}
+
+
+ul.socail-menu li {
+  display: inline-block;
+  width: auto;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.nf-animate.mfp-ready .mfp-content {
+  position: fixed;
+  top: 18%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 480px) {
+  .beige-fill .sent_doc .nf-field {
+    width: 100%;
+  }
+  .beige-fill .sent_doc .nf-before-field {
+    width: 0%;
+  }
+
+  .beige-fill .label-left .nf-field-element {
+    width: 100%;
+  }
+
+  .beige-fill .label-left .nf-field-label {
+    width: 100%;
+  }
+
+  .beige-fill #ninja_forms_required_items, 
+  .beige-fill .nf-field-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .beige-fill .label-left .nf-after-field {
+    margin-left: 0;
+  }
+
+  .beige-fill .label_wrap {
+    margin-left: 0;
+  }
+}
+   
